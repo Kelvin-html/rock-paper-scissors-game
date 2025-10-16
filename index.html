@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-Paper-Scissors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body class="bg-black/80 overflow-x-hidden">
+<div class="max-w-4xl m-auto flex justify-center">
+ <div class="my-8">
+   <h1 class="text-white text-center font-mono text-2xl">Pick a Move!</h1>
+
+ <div class="mt-6 space-x-8 w-5xl">
+  <button onclick="runGame('rock')" class="fa-solid fa-hand-back-fist h-20 w-20 py-2 px-6 text-white bg-black/70 rounded-full active:border-2 "
+   ></button>
+
+  <button  onclick="runGame('paper')" class="fa-solid fa-hand h-20 w-20 py-2 px-6 text-white bg-black/70 rounded-full active:border-2"
+   ></button>
+
+  <button onclick=" runGame('scissors')" class="fa-solid fa-hand-scissors h-20 w-20 py-2 px-6 text-white bg-black/70 rounded-full active:border-2"
+   ></button>
+ </div>
+ 
+ <div class="space-y-3 mt-3">
+<p class = "result-display text-white font-bold text-2xl "></p>
+<div class = "picks-display text-white font-semibold flex justify-between">
+  <div class="player.pick"></div>
+  <div class="computer.pick"></div>
+</div>
+<p class = "score-display text-white font-semibold"></p>
+</div>
+
+
+  <button onclick="resetScore(); localStorage.removeItem('score') " class="py-2 px-6 text-white bg-black/70 rounded-xl  mt-6 font-mono"
+   >reset score
+  </button>
+ </div>
+</div>
+
+  <script src="index.js"></script>
+  
+</body>
+</html>
